@@ -82,7 +82,6 @@ main {
 }
 
 .phone-container {
-    background-color: var(--white);
     border-radius: 40px;
     border: 13px solid var(--white);
     overflow: hidden;
