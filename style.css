@@ -1,0 +1,372 @@
+:root {
+    /* sub-heading at the top of the app */
+    --pale-violet: hsl(276, 100%, 81%);
+    /* chat on the left*/
+    --moderate-violet: hsl(276, 55%, 52%);
+
+    /* chat on the right */
+    --desaturated-dark-violet: hsl(271, 15%, 43%);
+
+    /* placeholder text */
+    --grayish-blue: hsl(206, 6%, 79%);
+    /* main heading */
+    /* submiy button background */
+    --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+
+    /* paragraph */
+    --dark-grayish-violet: hsl(270, 7%, 64%);
+
+    /* gradient */
+    --light-magenta: hsl(293, 100%, 63%);
+    --light-violet: hsl(264, 100%, 61%);
+
+    /*-- secondary --*/
+    --white: hsl(0, 0%, 100%);
+    /* app background */
+    --light-grayish-violet: hsl(270, 20%, 96%);
+
+    /* radio button outline */
+    --very-light-magenta: hsl(289, 100%, 72%);
+
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+}
+
+.first-background {
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    right: 80%;
+    bottom: 40%;
+    background-image: linear-gradient(210deg,  var(--light-magenta), var(--light-violet));
+    z-index: -1;
+    border-radius: 0 0 60% 60%;
+}
+
+.second-background {
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    left: 80%;
+    top: 40%;
+    background-color: var(--grayish-blue);
+    opacity: 0.1;
+    z-index: -1;
+    border-radius: 60% 60% 0 0;
+}
+
+
+body {
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    
+    background-color: var(--white);
+    transform: scale(0.8);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.phone-container {
+    background-color: var(--white);
+    border-radius: 40px;
+    border: 13px solid var(--white);
+    overflow: hidden;
+    min-width: 23rem;
+    box-shadow: 10px 10px 40px 2px var(--dark-grayish-violet);
+}
+
+.phone-container::before {
+    content: '';
+    background-color: var(--white);
+    height: 2rem;
+    width: 11rem;
+    margin-left: 5.3rem;
+    margin-top: -0.8rem;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.chat-header {
+    background-image: linear-gradient(120deg, var(--light-violet), var(--light-magenta));
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    padding: 2rem 1rem 1rem 1rem;
+    border-radius: 0 0 0.3rem 0.3rem;
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-right: 0.6rem;
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.chat-header img {
+    height: auto;
+    width: 2.5rem;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    margin-right: 1rem;
+}
+
+.chat-header p {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    justify-content: space-between;
+}
+
+.chat-header p span {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--pale-violet);
+}
+
+
+/*https://stackoverflow.com/questions/30260195/how-to-make-3-vertical-dots-using-css*/
+.chat-header::after {
+    content: '\2807';
+    font-size: 20px;
+    height: 100%;
+    flex: 1;
+    text-align: right;
+}
+
+.chat-container {
+    background-color: var(--light-grayish-violet);
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.6rem;
+}
+
+.chat-container p {
+    font-size: 12px;
+    max-width: 11.4rem;
+    padding: 0.5rem;
+}
+
+.chat-container > div:nth-child(1) {
+    margin-top: 1rem;
+}
+
+.chat-container > div:nth-child(3) {
+    margin-top: 1rem;
+}
+
+.chat-container > div:nth-child(6) {
+    margin-top: 1rem;
+}
+
+.recive-message,
+.send-message, 
+.price-info,
+.chat-writer {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.recive-message { 
+    background: transparent;
+}
+
+.recive-message p {
+    float: left;
+    background-color: var(--grayish-blue);
+    border-radius: 13px 13px 13px 2px;
+    color: var(--moderate-violet);
+}
+
+.send-message p {
+    float: right;
+    background-color: var(--white);
+    border-radius: 13px 13px 2px 13px;
+    color: var(--desaturated-dark-violet);
+}
+
+.send-message > img {
+    width: 3.5rem;
+    height: auto;
+    float: right;
+    border-radius: 12px;
+    margin-left: 0.7rem;
+}
+
+.price-info p {
+    background-image: linear-gradient(125deg, var(--light-magenta), var(--moderate-violet));
+    display: flex;
+    align-items: center;
+    max-width: 13rem;
+    color: var(--light-grayish-violet);
+    padding: 0.7rem 1rem 0.7rem 0.7rem;
+    border-radius: 15px 15px 15px 4px;
+}
+
+.price-info p span {
+    font-weight: 700;
+    color: var(--white);
+    position: relative;
+    flex: 1;
+    text-align: right;
+}
+
+.price-info p::before {
+    content: '';
+    background-color: transparent;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--pale-violet);
+    margin-right: 1rem;
+}
+
+.chat-writer {
+    width: 100%;
+}
+
+.left {
+    transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+}
+
+.input-button {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--white);
+    margin-bottom: 1rem;
+    margin-top: 0.8rem;
+    border-radius: 30px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.chat-writer input[type="text"] {
+    flex-grow: 2;
+    height: 3rem;
+    border: none;
+    padding: 1.6rem;
+    color: var(--very-dark-desaturated-violet);
+}
+
+input[type="text"]::placeholder {
+    color: var(--grayish-blue);
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+button {
+    border: none;
+    background-color: var(--very-dark-desaturated-violet);
+    border-radius: 50%;
+    height:2rem;
+    width: 2rem;
+    margin-right: 0.4rem;
+
+    /* code to center icon */
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+.main-info {
+    margin-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.1rem;
+}
+
+.main-info h1, .main-info p {
+    text-align: center;
+}
+
+.main-info h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--very-dark-desaturated-violet);
+}
+
+.main-info p {
+    font-size: 1.1rem;
+    padding: 1rem;
+    line-height: 1.6rem;
+    color: var(--dark-grayish-violet);
+}
+
+
+footer {
+    position: absolute;
+    bottom: -5rem;
+}
+
+@media(min-width: 580px) {
+    
+    body {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    main {
+        flex-direction: row;
+        column-gap: 10rem;
+    }
+    
+    .main-info {
+        max-width: 31rem;
+    }
+
+    .main-info h1, .main-info p {
+        text-align: left;
+        padding: 0;
+    }
+
+    .first-background {
+        height: 120%;
+        width: 50%;
+        right: 80%;
+        bottom: -3rem;
+    }
+    
+    .second-background {
+        height: 120%;
+        width: 50%;
+        left: 80%;
+        top: -3rem;
+    }
+
+
+    footer {
+        bottom: -1;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
