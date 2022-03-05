@@ -245,7 +245,7 @@ main {
     width: 100%;
 }
 
-.left {
+.right {
     transform: rotate(315deg);
     -webkit-transform: rotate(315deg);
 }
